@@ -1,0 +1,16 @@
+
+[Unit]
+Description=Stock_Pricer
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=connor
+ExecStart=/home/connor/anaconda3/envs/Stock_Pricer/bin/python3 /home/connor/Stock_Pricer/main.py
+WorkingDirectory=/home/connor/Stock_Pricer
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
