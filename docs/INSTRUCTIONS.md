@@ -252,7 +252,7 @@ This is for uninstalling and removing the service.
     sudo systemctl stop [service_name]
 
 
-    sudo systemctl stop <service_name>
+    sudo systemctl stop stock_pricer.service
 
 
 ### 3. Run the following command to delete the service file: ###
@@ -260,7 +260,7 @@ This is for uninstalling and removing the service.
     sudo rm [service_moved_path]
 
 
-    sudo rm <service_moved_path>
+    sudo rm /etc/systemd/system/stock_pricer.service
 
 
 

@@ -41,6 +41,8 @@
 
 This project is a stock pricer. It retreives stock data from Yahoo Finance, which is used to store and analyze stock data.
 
+Status: In Development
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
