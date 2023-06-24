@@ -38,12 +38,12 @@ Conda is a package manager for python. It is used to install python packages and
 
 ### 2. Run the following command to download the conda installer: ###
 
-    wget <conda_install_link>
+    wget https://repo.anaconda.com/archive/anaconda3-2022.05-linux-x86_64.sh
 
 
 ### 3. Run the following command to install conda: ###
 
-    bash <conda_file>
+    bash anaconda3-2022.05-linux-x86_64.sh
 
 
 ### 4. Run the following command to update conda: ###
@@ -116,12 +116,12 @@ This is for installing python packages and conda packages.
 
 ### 3. Install the following requirements: ###
 
-    pip install -r <requirements_file> && conda install --file <conda_requirements_file>  && conda install -c conda-forge --file <conda_forge_requirements_file>
+    pip install -r /home/connor/stock_pricer/requirements/requirements.txt && conda install --file /home/connor/stock_pricer/requirements/conda_requirements.txt  && conda install -c conda-forge --file /home/connor/stock_pricer/requirements/conda_forge_requirements.txt
 
 
 ### 4. Install the following apt-get requirements: ###
 
-    <apt_get_str>
+    [no apt-get requirements]
 
 
 
