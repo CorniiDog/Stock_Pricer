@@ -11,18 +11,11 @@ ticker_retreival.set_storage_path(database_path)
 
 
 def main():
-    last_updated = 0
-    while True:
-        now = time.time()
-        # If it is a new day, update the database
-        if now - last_updated > 86400:
-            print("New Day, updating database")
-            ticker_info = ticker_retreival.get_all_ticker_information()
-            last_updated = now
-            print(ticker_info)
-        time.sleep(10)
+    approved_tickers = ticker_retreival.get_all_ticker_information(request_fresh=True)
+    print(approved_tickers)
 
-
+    rejected_tickers = ticker_retreival.get_rejected_tickers()
+    print(rejected_tickers)
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
