@@ -11,11 +11,12 @@ ticker_retreival.set_storage_path(database_path)
 
 
 def main():
-    approved_tickers = ticker_retreival.get_all_ticker_information(request_fresh=True)
+    approved_tickers = ticker_retreival.get_all_ticker_information()
     print(approved_tickers)
 
     rejected_tickers = ticker_retreival.get_rejected_tickers()
     print(rejected_tickers)
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
