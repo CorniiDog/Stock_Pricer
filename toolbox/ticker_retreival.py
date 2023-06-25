@@ -194,6 +194,7 @@ def get_ticker_information(symbol: str, days_reset_frequency=14, request_fresh=F
         return database.get(symbol + "_info")
 
     try:
+        time.sleep(5)
         stock_info = yf.Ticker(symbol).info
     except Exception as e:
         # If 404 error, then the ticker is not found

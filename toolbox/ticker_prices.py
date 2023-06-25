@@ -73,6 +73,7 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_
 
 
     def get_trend_request(ticker, start, end, cooldown_counter=0, interval="1h"):
+        time.sleep(3)
         try:
             trend = yf.download(ticker, start, end, interval=interval)
         except Exception as e:
