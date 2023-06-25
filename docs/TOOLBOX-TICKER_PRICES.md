@@ -29,7 +29,7 @@ Example
 
 # >  function get_ticker_historical_trend #
 
-### [def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
+### [def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
 
 Note
 

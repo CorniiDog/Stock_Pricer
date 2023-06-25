@@ -35,7 +35,7 @@ def set_storage_path(database_path: str, make_dir=False):
     database.set_storage_path(database_path)
 
 
-def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:
+def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:
     """
     Params
     ------

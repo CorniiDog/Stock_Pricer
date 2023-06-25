@@ -52,7 +52,7 @@ if output_instructions:
         search_item2 = "!<" + key + ">"
         if search_item2 in output:
             # Replace with the value
-            output = output.replace(search_item2, info.data[key].lower())
+            output = output.replace(search_item2, info.data[key])
 
     turn_to_readme = format_for_readme(output, document_path="docs/INSTRUCTIONS.md")
 

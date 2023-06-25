@@ -42,7 +42,7 @@ This is the documentation for the project Stock_Pricer.
 
 </summary>
 
-[def main():](./../main.py#L13) 
+[def main():](./../main.py#L16) 
 
 
 
@@ -336,7 +336,7 @@ Example
 
 </summary>
 
-[def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
+[def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
 
 Note
 
