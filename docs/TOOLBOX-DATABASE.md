@@ -8,20 +8,20 @@ Alternative Import Statement: `from toolbox.database import *`
 
 ### [def set_storage_path(path):](./../toolbox/database.py#L9) 
 
-Notes
+Note
 
 ```python
     This function is used to set the path to the folder where the database files will be stored
 ```
 
-Parameters
+Parameter
 
 ```python
     path : str
         The path to the folder where the database files will be stored
 ```
 
-Returns
+Return
 
 ```python
     None
@@ -34,7 +34,7 @@ Example
     set_storage_path('C:/Users/JohnDoe/Documents/MyDatabase')
 ```
 
-References
+Reference
 
 ```python
     No Links
@@ -44,14 +44,14 @@ References
 
 ### [def slugify(value, allow_unicode=False):](./../toolbox/database.py#L41) 
 
-Notes
+Note
 
 ```python
     This function is used to slugify strings, which basically means to remove all special characters and replace them with dashes.
     This is useful for creating file names from strings.
 ```
 
-Parameters
+Parameter
 
 ```python
     value : str
@@ -60,7 +60,7 @@ Parameters
         Whether or not to allow unicode characters
 ```
 
-Returns
+Return
 
 ```python
     str
@@ -73,7 +73,7 @@ Example
     a = slugify('Hello World')
 ```
 
-References
+Reference
 
 ```python
     https://github.com/django/django/blob/master/django/utils/text.py
@@ -83,20 +83,20 @@ References
 
 ### [def get(name: str):](./../toolbox/database.py#L77) 
 
-Notes
+Note
 
 ```python
     This function is used to load objects from the database folder
 ```
 
-Parameters
+Parameter
 
 ```python
     name : str
         The name of the file to be loaded
 ```
 
-Returns
+Return
 
 ```python
     object or None
@@ -109,7 +109,7 @@ Example
     spreadsheet_data = get('spreadsheet_people')
 ```
 
-References
+Reference
 
 ```python
     No Links
@@ -119,20 +119,20 @@ References
 
 ### [def get_modified_date(name: str):](./../toolbox/database.py#L112) 
 
-Notes
+Note
 
 ```python
     This function is used to get the last modified date of a file in the database folder
 ```
 
-Parameters
+Parameter
 
 ```python
     name : str
         The name of the file to be loaded
 ```
 
-Returns
+Return
 
 ```python
     datetime.datetime or None
@@ -145,7 +145,7 @@ Example
     date = get_modified_date('spreadsheet_people')
 ```
 
-References
+Reference
 
 ```python
     No Links
@@ -155,13 +155,13 @@ References
 
 ### [def save(name: str, data: any) -> None:](./../toolbox/database.py#L147) 
 
-Notes
+Note
 
 ```python
     This function is used to save objects to the database folder
 ```
 
-Parameters
+Parameter
 
 ```python
     name : str
@@ -170,7 +170,7 @@ Parameters
         The data to be saved
 ```
 
-Returns
+Return
 
 ```python
     None
@@ -185,7 +185,7 @@ Example
     save('spreadsheet_people', spreadsheet_data)
 ```
 
-References
+Reference
 
 ```python
     No Links
@@ -195,20 +195,20 @@ References
 
 ### [def delete_database(name: str) -> object:](./../toolbox/database.py#L182) 
 
-Notes
+Note
 
 ```python
     This function is used to delete objects from the database folder
 ```
 
-Parameters
+Parameter
 
 ```python
     name : str
         The name of the file to be deleted
 ```
 
-Returns
+Return
 
 ```python
     object or None
@@ -225,7 +225,7 @@ Example
     delete_database('spreadsheet_people')
 ```
 
-References
+Reference
 
 ```python
     No Links
@@ -235,13 +235,13 @@ References
 
 ### [def save_key(platform: str, key: str, override: bool = False) -> None:](./../toolbox/database.py#L220) 
 
-Notes
+Note
 
 ```python
     This function is used to save keys in a secure location
 ```
 
-Parameters
+Parameter
 
 ```python
     platform: str
@@ -252,7 +252,7 @@ Parameters
         Whether or not to override the key if it already exists
 ```
 
-Returns
+Return
 
 ```python
     None
@@ -265,7 +265,7 @@ Example
     save_key('google', '<google_api_key>')
 ```
 
-References
+Reference
 
 ```python
     https://www.nylas.com/blog/making-use-of-environment-variables-in-python/
@@ -275,20 +275,20 @@ References
 
 ### [def load_key(platform: str) -> str:](./../toolbox/database.py#L267) 
 
-Notes
+Note
 
 ```python
         This function is used to load keys from a secure location
 ```
 
-Parameters
+Parameter
 
 ```python
         platform: str
             The key to be loaded (e.g. '<google_api_key>')
 ```
 
-Returns
+Return
 
 ```python
         str or None
@@ -301,7 +301,7 @@ Example
         key = load_key('google')
 ```
 
-References
+Reference
 
 ```python
         https://www.nylas.com/blog/making-use-of-environment-variables-in-python/

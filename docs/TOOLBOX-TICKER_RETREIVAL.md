@@ -8,13 +8,13 @@ Alternative Import Statement: `from toolbox.ticker_retreival import *`
 
 ### [def set_storage_path(database_path: str, make_dir=False):](./../toolbox/ticker_retreival.py#L8) 
 
-Notes
+Note
 
 ```python
     This function is used to set the path to the database. The database is a
 ```
 
-Returns
+Return
 
 ```python
     None
@@ -31,21 +31,17 @@ Example
 
 ### [def get_tickers(days_reset_frequency=7, request_fresh=False):](./../toolbox/ticker_retreival.py#L37) 
 
-Notes
+Note
 
 ```python
     This function is used to get the list of tickers. The tickers are saved in the database. If the tickers are older
 ```
 
-Returns
+Return
 
 ```python
     tickers: list
         List of tickers
-
-    Reference
-    ---------
-    https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
 ```
 
 Example
@@ -56,11 +52,17 @@ Example
     tickers = ticker_retreival.get_tickers()
 ```
 
+Reference
+
+```python
+    https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
+```
+
 # >  function get_rejected_tickers #
 
 ### [def get_rejected_tickers(days_reset_frequency=7, request_fresh=False):](./../toolbox/ticker_retreival.py#L112) 
 
-Notes
+Note
 
 ```python
     This function is used to get the list of rejected tickers.
@@ -68,13 +70,9 @@ Notes
     R = Rights Issue
     P = “First Preferred Issue”. Preferred stocks are a separate entity.
     Q = Bankruptcy
-
-    Reference
-    ---------
-    https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
 ```
 
-Returns
+Return
 
 ```python
     rejected_tickers: list
@@ -89,17 +87,23 @@ Example
     rejected_tickers = ticker_retreival.get_rejected_tickers()
 ```
 
+Reference
+
+```python
+    https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
+```
+
 # >  function get_ticker_information #
 
 ### [def get_ticker_information(symbol: str, days_reset_frequency=14, request_fresh=False, cooldown_counter=0):](./../toolbox/ticker_retreival.py#L151) 
 
-Notes
+Note
 
 ```python
     This function is used to get the information for a given ticker. The information is saved in the database. If the
 ```
 
-Returns
+Return
 
 ```python
     stock_info: dict
@@ -121,13 +125,13 @@ Example
 
 ### [def get_all_ticker_information(days_reset_frequency=1, request_fresh=False):](./../toolbox/ticker_retreival.py#L231) 
 
-Notes
+Note
 
 ```python
     This function is used to get the information for all tickers. The information is saved in the database. If the
 ```
 
-Returns
+Return
 
 ```python
     all_info: dict

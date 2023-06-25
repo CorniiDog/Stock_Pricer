@@ -8,13 +8,13 @@ Alternative Import Statement: `from toolbox.ticker_prices import *`
 
 ### [def set_storage_path(database_path: str, make_dir=False):](./../toolbox/ticker_prices.py#L8) 
 
-Notes
+Note
 
 ```python
     This function is used to set the path to the database. The database is a
 ```
 
-Returns
+Return
 
 ```python
     None
@@ -31,14 +31,14 @@ Example
 
 ### [def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
 
-Notes
+Note
 
 ```python
     This function is used to get the historical trend of a ticker. The historical trend is stored in the database. If the
     historical trend is not in the database, it will be downloaded from Yahoo Finance and stored in the database.
 ```
 
-Returns
+Return
 
 ```python
     pd.DataFrame
