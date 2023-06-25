@@ -170,7 +170,7 @@ def get_ticker_information(symbol: str, days_reset_frequency=14, request_fresh=F
     -----
     This function is used to get the information for a given ticker. The information is saved in the database. If the
 
-    Example
+    Examples
     --------
     from toolbox import ticker_retreival
     ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
@@ -247,7 +247,7 @@ def get_all_ticker_information(days_reset_frequency=1, request_fresh=False):
     -----
     This function is used to get the information for all tickers. The information is saved in the database. If the
 
-    Example
+    Examples
     --------
     from toolbox import ticker_retreival
     ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')

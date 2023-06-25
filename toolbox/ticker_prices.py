@@ -22,7 +22,7 @@ def set_storage_path(database_path: str, make_dir=False):
     -----
     This function is used to set the path to the database. The database is a
 
-    Example
+    Examples
     --------
     from toolbox import ticker_prices
     ticker_prices.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
@@ -58,7 +58,7 @@ def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date:
     This function is used to get the historical trend of a ticker. The historical trend is stored in the database. If the
     historical trend is not in the database, it will be downloaded from Yahoo Finance and stored in the database.
 
-    Example
+    Examples
     --------
     from toolbox import ticker_prices
     import datetime

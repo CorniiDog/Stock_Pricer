@@ -91,15 +91,6 @@ Notes
 
 ```python
     This function is used to get the information for a given ticker. The information is saved in the database. If the
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    stock_info = ticker_retreival.get_ticker_information('MSFT')
-    name = stock_info['shortName']
-    website = stock_info['website']
-    description = stock_info['longBusinessSummary']
 ```
 
 Returns
@@ -107,6 +98,17 @@ Returns
 ```python
     stock_info: dict
         Dictionary of stock information
+```
+
+Examples
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    stock_info = ticker_retreival.get_ticker_information('MSFT')
+    name = stock_info['shortName']
+    website = stock_info['website']
+    description = stock_info['longBusinessSummary']
 ```
 
 # >  function get_all_ticker_information #
@@ -117,13 +119,6 @@ Notes
 
 ```python
     This function is used to get the information for all tickers. The information is saved in the database. If the
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    all_info = ticker_retreival.get_all_ticker_information()
-    print(all_info['MSFT']['shortName'])
 ```
 
 Returns
@@ -131,5 +126,14 @@ Returns
 ```python
     all_info: dict
         Dictionary of stock information for all tickers
+```
+
+Examples
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    all_info = ticker_retreival.get_all_ticker_information()
+    print(all_info['MSFT']['shortName'])
 ```
 

@@ -196,15 +196,6 @@ Notes
 
 ```python
     This function is used to get the information for a given ticker. The information is saved in the database. If the
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    stock_info = ticker_retreival.get_ticker_information('MSFT')
-    name = stock_info['shortName']
-    website = stock_info['website']
-    description = stock_info['longBusinessSummary']
 ```
 
 Returns
@@ -213,6 +204,18 @@ Returns
 ```python
     stock_info: dict
         Dictionary of stock information
+```
+
+Examples
+
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    stock_info = ticker_retreival.get_ticker_information('MSFT')
+    name = stock_info['shortName']
+    website = stock_info['website']
+    description = stock_info['longBusinessSummary']
 ```
 
 
@@ -236,13 +239,6 @@ Notes
 
 ```python
     This function is used to get the information for all tickers. The information is saved in the database. If the
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    all_info = ticker_retreival.get_all_ticker_information()
-    print(all_info['MSFT']['shortName'])
 ```
 
 Returns
@@ -251,6 +247,16 @@ Returns
 ```python
     all_info: dict
         Dictionary of stock information for all tickers
+```
+
+Examples
+
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    all_info = ticker_retreival.get_all_ticker_information()
+    print(all_info['MSFT']['shortName'])
 ```
 
 
@@ -284,11 +290,6 @@ Notes
 
 ```python
     This function is used to set the path to the database. The database is a
-
-    Example
-    --------
-    from toolbox import ticker_prices
-    ticker_prices.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 Returns
@@ -296,6 +297,14 @@ Returns
 
 ```python
     None
+```
+
+Examples
+
+
+```python
+    from toolbox import ticker_prices
+    ticker_prices.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 
@@ -320,15 +329,6 @@ Notes
 ```python
     This function is used to get the historical trend of a ticker. The historical trend is stored in the database. If the
     historical trend is not in the database, it will be downloaded from Yahoo Finance and stored in the database.
-
-    Example
-    --------
-    from toolbox import ticker_prices
-    import datetime
-    date = '09/10/2019'
-    datetime_object = datetime.datetime.strptime(date, '%m/%d/%Y')
-    today = datetime.datetime.today()
-    print(ticker_prices.get_ticker_historical_trend('MSFT', datetime_object, today))
 ```
 
 Returns
@@ -337,6 +337,18 @@ Returns
 ```python
     pd.DataFrame
         Historical trend of the ticker
+```
+
+Examples
+
+
+```python
+    from toolbox import ticker_prices
+    import datetime
+    date = '09/10/2019'
+    datetime_object = datetime.datetime.strptime(date, '%m/%d/%Y')
+    today = datetime.datetime.today()
+    print(ticker_prices.get_ticker_historical_trend('MSFT', datetime_object, today))
 ```
 
 
