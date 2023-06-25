@@ -93,10 +93,7 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_
         start_end_dates = []
         pre_existing_trend = None
         while start_date < end_date:
-            interval = "1m"
-            # If the time delta is greater than 7 days, use 1h interval
-            if (end_date - start_date).days > 7:
-                interval = "1h"
+            interval = "1h"
 
             # If the time delta is greater than 2 years, use 1d interval
             if (end_date - start_date).days > 365 * 2:
@@ -136,6 +133,8 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_
             pre_existing_trend = pd.concat([pre_existing_trend, get_trend(ticker, last_date, end_date)])
 
     database.save(ticker + '_trend', pre_existing_trend)
+    # Print last item in the trend
+    print(ticker, pre_existing_trend.tail(1))
     return pre_existing_trend
 
 if __name__ == '__main__':

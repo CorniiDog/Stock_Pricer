@@ -11,7 +11,7 @@ database_path = os.path.join(storage_path, "database")
 ticker_retreival.set_storage_path(database_path)
 ticker_prices.set_storage_path(database_path)
 
-days_to_refresh = 1
+days_to_refresh = 2
 
 def main():
 

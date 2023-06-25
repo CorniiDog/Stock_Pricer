@@ -208,6 +208,13 @@ To disable the service, run:
     sudo systemctl disable Stock_Pricer.service
 
 
+To view output of service easier:
+
+    journalctl --unit=[service_name] -n 100 --no-pager
+
+
+    journalctl --unit=Stock_Pricer.service -n 100 --no-pager
+
 
 
 

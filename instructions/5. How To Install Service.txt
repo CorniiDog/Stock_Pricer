@@ -32,3 +32,8 @@ To disable the service, run:
     sudo systemctl disable [service_name
 
     sudo systemctl disable !<service_name>
+
+To view output of service easier:
+    journalctl --unit=[service_name] -n 100 --no-pager
+
+    journalctl --unit=!<service_name> -n 100 --no-pager
