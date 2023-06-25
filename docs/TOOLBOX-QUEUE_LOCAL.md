@@ -16,7 +16,7 @@ Notes
     A queue can be implemented using a list or a linked list.
 ```
 
-Examples
+Example
 
 ```python
     queue = Queue([1, 2, 3, 4, 5], 10)
@@ -56,7 +56,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], 10)
@@ -81,7 +81,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -109,7 +109,7 @@ Returns
             The item that was removed from the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -139,7 +139,7 @@ Returns
             The size of the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -168,7 +168,7 @@ Returns
             True if the queue is empty, False otherwise
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -196,7 +196,7 @@ Returns
             The first item in the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -226,7 +226,7 @@ Returns
             The list of items in the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -256,7 +256,7 @@ Returns
             The size of the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -284,7 +284,7 @@ Returns
             A copy of the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -314,7 +314,7 @@ Returns
             A copy of the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue(max_size=10)
@@ -344,7 +344,7 @@ Returns
             True if the queues are equal, False otherwise
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -370,7 +370,7 @@ Returns
             True if the queues are not equal, False otherwise
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -396,7 +396,7 @@ Returns
             The item at the given index
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -420,7 +420,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -445,7 +445,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -471,7 +471,7 @@ Returns
             An iterator for the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -497,7 +497,7 @@ Returns
             An iterator for the queue in reverse order
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -523,7 +523,7 @@ Returns
             True if the item is in the queue, False otherwise
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -548,7 +548,7 @@ Returns
             A new queue with the items from both queues
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -575,7 +575,7 @@ Returns
             This queue with the items from both queues
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -602,7 +602,7 @@ Returns
             A new queue with the items from this queue repeated the given number of times
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -628,7 +628,7 @@ Returns
             This queue with the items from this queue repeated the given number of times
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)
@@ -654,7 +654,7 @@ Returns
             A string representation of the queue
 ```
 
-Examples
+Example
 
 ```python
         queue = Queue([1, 2, 3, 4, 5], max_size=10)

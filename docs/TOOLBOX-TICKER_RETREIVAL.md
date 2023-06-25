@@ -12,17 +12,19 @@ Notes
 
 ```python
     This function is used to set the path to the database. The database is a
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 Returns
 
 ```python
     None
+```
+
+Example
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 # >  function get_tickers #
@@ -33,12 +35,6 @@ Notes
 
 ```python
     This function is used to get the list of tickers. The tickers are saved in the database. If the tickers are older
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    tickers = ticker_retreival.get_tickers()
 ```
 
 Returns
@@ -50,6 +46,14 @@ Returns
     Reference
     ---------
     https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
+```
+
+Example
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    tickers = ticker_retreival.get_tickers()
 ```
 
 # >  function get_rejected_tickers #
@@ -68,12 +72,6 @@ Notes
     Reference
     ---------
     https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    rejected_tickers = ticker_retreival.get_rejected_tickers()
 ```
 
 Returns
@@ -81,6 +79,14 @@ Returns
 ```python
     rejected_tickers: list
         List of rejected tickers
+```
+
+Example
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    rejected_tickers = ticker_retreival.get_rejected_tickers()
 ```
 
 # >  function get_ticker_information #
@@ -100,7 +106,7 @@ Returns
         Dictionary of stock information
 ```
 
-Examples
+Example
 
 ```python
     from toolbox import ticker_retreival
@@ -128,7 +134,7 @@ Returns
         Dictionary of stock information for all tickers
 ```
 
-Examples
+Example
 
 ```python
     from toolbox import ticker_retreival

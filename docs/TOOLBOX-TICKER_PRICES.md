@@ -20,7 +20,7 @@ Returns
     None
 ```
 
-Examples
+Example
 
 ```python
     from toolbox import ticker_prices
@@ -45,7 +45,7 @@ Returns
         Historical trend of the ticker
 ```
 
-Examples
+Example
 
 ```python
     from toolbox import ticker_prices

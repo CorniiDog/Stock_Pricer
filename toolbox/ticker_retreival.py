@@ -22,7 +22,7 @@ def set_storage_path(database_path: str, make_dir=False):
     -----
     This function is used to set the path to the database. The database is a
 
-    Example
+    Examples
     --------
     from toolbox import ticker_retreival
     ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
@@ -57,7 +57,7 @@ def get_tickers(days_reset_frequency=7, request_fresh=False):
     -----
     This function is used to get the list of tickers. The tickers are saved in the database. If the tickers are older
 
-    Example
+    Examples
     --------
     from toolbox import ticker_retreival
     ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
@@ -138,7 +138,7 @@ def get_rejected_tickers(days_reset_frequency=7, request_fresh=False):
     ---------
     https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
 
-    Example
+    Examples
     --------
     from toolbox import ticker_retreival
     ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')

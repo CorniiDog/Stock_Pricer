@@ -28,7 +28,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 ```python
     set_storage_path('C:/Users/JohnDoe/Documents/MyDatabase')
@@ -67,7 +67,7 @@ Returns
         The slugified string
 ```
 
-Examples
+Example
 
 ```python
     a = slugify('Hello World')
@@ -103,7 +103,7 @@ Returns
         The object loaded from the file, could be anything
 ```
 
-Examples
+Example
 
 ```python
     spreadsheet_data = get('spreadsheet_people')
@@ -139,7 +139,7 @@ Returns
         The datetime object of the last modified date
 ```
 
-Examples
+Example
 
 ```python
     date = get_modified_date('spreadsheet_people')
@@ -177,7 +177,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 ```python
     spreadsheet_data = {"People": ["Bill", "Kent", "Steve"], "Ages": [20, 30, 40]}
@@ -215,7 +215,7 @@ Returns
         The object loaded from the file, could be anything
 ```
 
-Examples
+Example
 
 ```python
     spreadsheet_data = {"People": ["Bill", "Kent", "Steve"], "Ages": [20, 30, 40]}
@@ -259,7 +259,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 ```python
     save_key('google', '<google_api_key>')
@@ -295,7 +295,7 @@ Returns
             This function returns the key if it exists, otherwise it returns None
 ```
 
-Examples
+Example
 
 ```python
         key = load_key('google')

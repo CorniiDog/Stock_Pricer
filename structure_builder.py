@@ -169,7 +169,7 @@ if output_instructions:
                         file_documentation = f"/{file_document_path}#{obj_type}-{name.lower().replace(' ', '-').replace('.', '')}"
                         writing_header = f"### {spaces}[{obj_type + ' ' + name}]({file_documentation}) \n\n"
                         documents = get_class_documentation(i + 1)
-                        sections = ["Notes", "Parameters", "Returns", "Examples", "References"]
+                        sections = ["Notes", "Parameters", "Returns", "Example", "References"]
                         new_documentation = ""
                         for section in sections:
                             if section in documents:

@@ -75,11 +75,6 @@ Notes
 
 ```python
     This function is used to set the path to the database. The database is a
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 Returns
@@ -87,6 +82,14 @@ Returns
 
 ```python
     None
+```
+
+Example
+
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
 ```
 
 
@@ -110,12 +113,6 @@ Notes
 
 ```python
     This function is used to get the list of tickers. The tickers are saved in the database. If the tickers are older
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    tickers = ticker_retreival.get_tickers()
 ```
 
 Returns
@@ -128,6 +125,15 @@ Returns
     Reference
     ---------
     https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
+```
+
+Example
+
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    tickers = ticker_retreival.get_tickers()
 ```
 
 
@@ -159,12 +165,6 @@ Notes
     Reference
     ---------
     https://levelup.gitconnected.com/how-to-get-all-stock-symbols-a73925c16a1b
-
-    Example
-    --------
-    from toolbox import ticker_retreival
-    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
-    rejected_tickers = ticker_retreival.get_rejected_tickers()
 ```
 
 Returns
@@ -173,6 +173,15 @@ Returns
 ```python
     rejected_tickers: list
         List of rejected tickers
+```
+
+Example
+
+
+```python
+    from toolbox import ticker_retreival
+    ticker_retreival.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+    rejected_tickers = ticker_retreival.get_rejected_tickers()
 ```
 
 
@@ -206,7 +215,7 @@ Returns
         Dictionary of stock information
 ```
 
-Examples
+Example
 
 
 ```python
@@ -249,7 +258,7 @@ Returns
         Dictionary of stock information for all tickers
 ```
 
-Examples
+Example
 
 
 ```python
@@ -299,7 +308,7 @@ Returns
     None
 ```
 
-Examples
+Example
 
 
 ```python
@@ -339,7 +348,7 @@ Returns
         Historical trend of the ticker
 ```
 
-Examples
+Example
 
 
 ```python
@@ -418,7 +427,7 @@ Notes
     A queue can be implemented using a list or a linked list.
 ```
 
-Examples
+Example
 
 
 ```python
@@ -464,7 +473,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 
 ```python
@@ -504,7 +513,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 
 ```python
@@ -547,7 +556,7 @@ Returns
             The item that was removed from the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -592,7 +601,7 @@ Returns
             The size of the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -636,7 +645,7 @@ Returns
             True if the queue is empty, False otherwise
 ```
 
-Examples
+Example
 
 
 ```python
@@ -679,7 +688,7 @@ Returns
             The first item in the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -724,7 +733,7 @@ Returns
             The list of items in the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -769,7 +778,7 @@ Returns
             The size of the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -812,7 +821,7 @@ Returns
             A copy of the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -857,7 +866,7 @@ Returns
             A copy of the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -902,7 +911,7 @@ Returns
             True if the queues are equal, False otherwise
 ```
 
-Examples
+Example
 
 
 ```python
@@ -943,7 +952,7 @@ Returns
             True if the queues are not equal, False otherwise
 ```
 
-Examples
+Example
 
 
 ```python
@@ -984,7 +993,7 @@ Returns
             The item at the given index
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1023,7 +1032,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1063,7 +1072,7 @@ Returns
         None
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1104,7 +1113,7 @@ Returns
             An iterator for the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1145,7 +1154,7 @@ Returns
             An iterator for the queue in reverse order
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1186,7 +1195,7 @@ Returns
             True if the item is in the queue, False otherwise
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1226,7 +1235,7 @@ Returns
             A new queue with the items from both queues
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1268,7 +1277,7 @@ Returns
             This queue with the items from both queues
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1310,7 +1319,7 @@ Returns
             A new queue with the items from this queue repeated the given number of times
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1351,7 +1360,7 @@ Returns
             This queue with the items from this queue repeated the given number of times
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1392,7 +1401,7 @@ Returns
             A string representation of the queue
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1452,7 +1461,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1508,7 +1517,7 @@ Returns
         The slugified string
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1561,7 +1570,7 @@ Returns
         The object loaded from the file, could be anything
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1614,7 +1623,7 @@ Returns
         The datetime object of the last modified date
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1669,7 +1678,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1724,7 +1733,7 @@ Returns
         The object loaded from the file, could be anything
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1785,7 +1794,7 @@ Returns
         This function does not return anything
 ```
 
-Examples
+Example
 
 
 ```python
@@ -1838,7 +1847,7 @@ Returns
             This function returns the key if it exists, otherwise it returns None
 ```
 
-Examples
+Example
 
 
 ```python
