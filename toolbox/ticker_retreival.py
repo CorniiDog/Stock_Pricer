@@ -199,6 +199,14 @@ def get_ticker_information(symbol: str, days_reset_frequency=14, request_fresh=F
         # If 404 error, then the ticker is not found
         if '404' in str(e):
             print("404 Not Found for " + symbol)
+            # Try to get the information from the database
+            try:
+                print("Trying to get the information from the database for " + symbol)
+                stock_info = database.get(symbol + "_info")
+                if stock_info is not None:
+                    return stock_info
+            finally:
+                pass
             return None
 
         print(e)

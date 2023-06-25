@@ -229,7 +229,7 @@ Returns
 
 </summary>
 
-[def get_all_ticker_information(days_reset_frequency=1, request_fresh=False):](./../toolbox/ticker_retreival.py#L223) 
+[def get_all_ticker_information(days_reset_frequency=1, request_fresh=False):](./../toolbox/ticker_retreival.py#L231) 
 
 Notes
 
@@ -254,6 +254,124 @@ Returns
 ```
 
 
+
+</details>
+
+<br></details>
+
+
+<details>
+<summary>
+
+## Documentation For [toolbox/ticker_prices.py](/docs/TOOLBOX-TICKER_PRICES.md)
+
+</summary>
+
+
+ <details>
+<summary>
+
+### > [function set_storage_path](/docs/TOOLBOX-TICKER_PRICES.md#function-set_storage_path) 
+
+
+
+</summary>
+
+[def set_storage_path(database_path: str, make_dir=False):](./../toolbox/ticker_prices.py#L8) 
+
+Notes
+
+
+```python
+    This function is used to set the path to the database. The database is a
+
+    Example
+    --------
+    from toolbox import ticker_prices
+    ticker_prices.set_storage_path('C:/Users/username/PycharmProjects/stock_analysis/database')
+```
+
+Returns
+
+
+```python
+    None
+```
+
+
+
+</details>
+
+
+ <details>
+<summary>
+
+### > [function get_ticker_historical_trend](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trend) 
+
+
+
+</summary>
+
+[def get_ticker_historical_trend(ticker, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
+
+Notes
+
+
+```python
+    This function is used to get the historical trend of a ticker. The historical trend is stored in the database. If the
+    historical trend is not in the database, it will be downloaded from Yahoo Finance and stored in the database.
+
+    Example
+    --------
+    from toolbox import ticker_prices
+    import datetime
+    date = '09/10/2019'
+    datetime_object = datetime.datetime.strptime(date, '%m/%d/%Y')
+    today = datetime.datetime.today()
+    print(ticker_prices.get_ticker_historical_trend('MSFT', datetime_object, today))
+```
+
+Returns
+
+
+```python
+    pd.DataFrame
+        Historical trend of the ticker
+```
+
+
+
+
+ <details>
+<summary>
+
+### >  > [function get_ticker_historical_trend.get_trend_request](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trendget_trend_request) 
+
+
+
+</summary>
+
+[def get_trend_request(ticker, start, end, cooldown_counter=0, interval="1h"):](./../toolbox/ticker_prices.py#L75) 
+
+
+
+</details>
+
+
+ <details>
+<summary>
+
+### >  > [function get_ticker_historical_trend.get_trend](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trendget_trend) 
+
+
+
+</summary>
+
+[def get_trend(ticker, start_date, end_date):](./../toolbox/ticker_prices.py#L92) 
+
+
+
+</details>
 
 </details>
 
