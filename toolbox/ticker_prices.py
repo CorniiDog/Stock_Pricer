@@ -35,7 +35,7 @@ def set_storage_path(database_path: str, make_dir=False):
     database.set_storage_path(database_path)
 
 
-def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, historical_buffer_days = 1) -> pd.DataFrame:
+def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, cooldown=True, database_only=False) -> pd.DataFrame:
     """
     Params
     ------
@@ -45,8 +45,13 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
         Start date
     end_date: datetime.datetime
         End date
-    historical_buffer_days: int
-        Number of days to subtract from the end date
+    cooldown: bool
+        If True, wait 3 seconds between requests
+    database_only: bool
+        If True, only get the historical trend from the database.
+        Setting it to True will not download the historical trend from Yahoo Finance,
+        but it is faster to retrieve the historical trend from the database.
+
 
     Returns
     -------
@@ -83,9 +88,10 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
 
 
     def get_trend_request(ticker, start, end, cooldown_counter=0, interval="1h"):
-        time.sleep(3)
+        if cooldown:
+            time.sleep(3)
         try:
-            trend = yf.download(ticker, start, end, interval=interval)
+            trend = yf.download(ticker, start=start, end=end, interval=interval)
             trend.index = pd.to_datetime(trend.index, utc=True)
             trend.index = trend.index.tz_convert('America/New_York')
         except Exception as e:
@@ -180,11 +186,18 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
         # Get the last date in the pre-existing trend
         last_date = pre_existing_trend.index[-1]
         # Localize to the same timezone as the end date
-        end_date_timezone = end_date.tzinfo
 
-        last_date = last_date.replace(tzinfo=pytz.utc).astimezone(end_date_timezone)
+        # If the place is closed, set it to the previous day
+        if end_date.hour < 9 or end_date.hour > 16:
+            end_date = end_date - datetime.timedelta(days=1)
 
-        if last_date < end_date:
+        # If the end date is during the weekend, set it to the previous Friday
+        if end_date.weekday() == 5:
+            end_date = end_date - datetime.timedelta(days=1)
+        elif end_date.weekday() == 6:
+            end_date = end_date - datetime.timedelta(days=2)
+
+        if last_date < end_date and not database_only:
             trend = get_trend(ticker, last_date, end_date)
             if trend is None:
                 return pre_existing_trend
