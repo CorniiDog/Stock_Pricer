@@ -33,7 +33,12 @@ def main():
                 # Get the ticker info. This will be obtained as yf.Ticker(symbol).info
                 ticker_info = ticker_retreival.get_ticker_information(ticker)
                 # Get firstTradeDateEpochUtc
-                first_trade_date = ticker_info["firstTradeDateEpochUtc"]
+                if "firstTradeDateEpochUtc" in ticker_info:
+                    first_trade_date = ticker_info["firstTradeDateEpochUtc"]
+                else:
+                    # We set to 1960 if we don't have the first trade date
+                    first_trade_date = -315593939
+
                 # Get the start date
                 start_date = datetime.datetime.fromtimestamp(first_trade_date)
 
