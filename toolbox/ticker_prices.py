@@ -78,8 +78,8 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
         start_date = start_date.astimezone(pytz.timezone('America/New_York'))
 
     # If end date's day is today, subtract the historical buffer days'
-    if end_date.date() == datetime.datetime.today().date():
-        end_date = end_date - datetime.timedelta(days=historical_buffer_days)
+    #if end_date.date() == datetime.datetime.today().date():
+    #    end_date = end_date - datetime.timedelta(days=historical_buffer_days)
 
 
     def get_trend_request(ticker, start, end, cooldown_counter=0, interval="1h"):
@@ -195,19 +195,16 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
     database.save(ticker + '_trend', pre_existing_trend)
 
 
-    # Check and make sure the end date is before the end of the trend
-    if end_date > pre_existing_trend.index[-1]:
-        end_date = pre_existing_trend.index[-1]
+    # Get closest index to the end date
+    end = pre_existing_trend.index.searchsorted(end_date)
 
-    # Set to the same timezone as the end date, which is America/New_York
-
-    # See if the start date is before the start of the trend
     if start_date is not None:
-        if start_date < pre_existing_trend.index[0]:
-            start_date = pre_existing_trend.index[0]
-        pre_existing_trend = pre_existing_trend.loc[start_date:end_date]
+        # Get closest index to the start date
+        start = pre_existing_trend.index.searchsorted(start_date)
+
+        pre_existing_trend = pre_existing_trend.iloc[start:end]
     else:
-        pre_existing_trend = pre_existing_trend.loc[:end_date]
+        pre_existing_trend = pre_existing_trend.iloc[:end]
 
     # Print last item in the trend
     return pre_existing_trend

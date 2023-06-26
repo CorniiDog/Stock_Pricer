@@ -13,6 +13,7 @@ ticker_retreival.set_storage_path(database_path)
 ticker_prices.set_storage_path(database_path)
 
 days_to_refresh = 1
+delete_trends = False # Set to true to delete all trends
 
 def get_ticker_prices(ticker):
     # Get the ticker info. This will be obtained as yf.Ticker(symbol).info
@@ -35,16 +36,17 @@ def get_ticker_prices(ticker):
 
 def main():
 
-    approved_tickers = ticker_retreival.get_tickers()
-    # Remove all ticker_trends
-    for ticker in approved_tickers:
-        try:
-            database.delete_database(ticker + "_trend")
-            print(ticker)
-        except:
-            pass
-    print("done")
-    time.sleep(999)
+    if delete_trends:
+        approved_tickers = ticker_retreival.get_tickers()
+        # Remove all ticker_trends
+        for ticker in approved_tickers:
+            try:
+                database.delete_database(ticker + "_trend")
+                print(ticker)
+            except:
+                pass
+        print("done")
+        return
 
     last_updated = 0
     while True:
