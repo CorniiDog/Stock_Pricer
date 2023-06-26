@@ -42,7 +42,7 @@ This is the documentation for the project Stock_Pricer.
 
 </summary>
 
-[def main():](./../main.py#L16) 
+[def main():](./../main.py#L18) 
 
 
 
@@ -397,13 +397,45 @@ Example
  <details>
 <summary>
 
+### > [function get_trend_request](/docs/TOOLBOX-TICKER_PRICES.md#function-get_trend_request) 
+
+
+
+</summary>
+
+[def _get_trend_request_(ticker, start, end, cooldown_counter=0, interval="1h", cooldown=True):](./../toolbox/ticker_prices.py#L38) 
+
+
+
+</details>
+
+
+ <details>
+<summary>
+
+### > [function get_trend](/docs/TOOLBOX-TICKER_PRICES.md#function-get_trend) 
+
+
+
+</summary>
+
+[def _get_trend_(ticker, start_date, end_date, cooldown=True):](./../toolbox/ticker_prices.py#L61) 
+
+
+
+</details>
+
+
+ <details>
+<summary>
+
 ### > [function get_ticker_historical_trend](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trend) 
 
 
 
 </summary>
 
-[def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime, end_date: datetime.datetime, historical_buffer_days = 1) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L38) 
+[def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, cooldown=True, database_only=False) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L120) 
 
 Note
 
@@ -423,8 +455,12 @@ Param
         Start date
     end_date: datetime.datetime
         End date
-    historical_buffer_days: int
-        Number of days to subtract from the end date
+    cooldown: bool
+        If True, wait 3 seconds between requests
+    database_only: bool
+        If True, only get the historical trend from the database.
+        Setting it to True will not download the historical trend from Yahoo Finance,
+        but it is faster to retrieve the historical trend from the database.
 ```
 
 Return
@@ -448,38 +484,6 @@ Example
 ```
 
 
-
-
- <details>
-<summary>
-
-### >  > [function get_ticker_historical_trend.get_trend_request](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trendget_trend_request) 
-
-
-
-</summary>
-
-[def get_trend_request(ticker, start, end, cooldown_counter=0, interval="1h"):](./../toolbox/ticker_prices.py#L75) 
-
-
-
-</details>
-
-
- <details>
-<summary>
-
-### >  > [function get_ticker_historical_trend.get_trend](/docs/TOOLBOX-TICKER_PRICES.md#function-get_ticker_historical_trendget_trend) 
-
-
-
-</summary>
-
-[def get_trend(ticker, start_date, end_date):](./../toolbox/ticker_prices.py#L93) 
-
-
-
-</details>
 
 </details>
 
