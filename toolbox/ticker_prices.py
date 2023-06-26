@@ -114,7 +114,6 @@ def _get_trend_(ticker, start_date, end_date, cooldown=True):
                 return None
         else:
             pre_existing_trend = pd.concat([pre_existing_trend, _get_trend_request_(ticker, start, end, interval=interval, cooldown=cooldown)])
-        time.sleep(1)
     return pre_existing_trend
 
 def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, cooldown=True, database_only=False) -> pd.DataFrame:
@@ -173,7 +172,7 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
 
 
     pre_existing_trend = database.get(ticker + '_trend')
-    if pre_existing_trend is None:
+    if pre_existing_trend is None or len(pre_existing_trend.index) == 0:
         pre_existing_trend = _get_trend_(ticker, start_date, end_date, cooldown=cooldown)
         database.save(ticker + '_trend', pre_existing_trend)
     else:
