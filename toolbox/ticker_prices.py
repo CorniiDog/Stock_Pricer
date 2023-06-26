@@ -123,7 +123,7 @@ def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = Non
             interval = "1h"
 
             # If the time delta is greater than 2 years, use 1d interval
-            if (end_date - start_date).days > 365 * 2:
+            if (end_date - start_date).days > 365 * 2-1:
                 interval = "1d"
 
             days = 365
