@@ -39,8 +39,8 @@ def main():
 
                 ticker_prices.get_ticker_historical_trend(ticker, start_date, today)
 
-                if i % 10 == 0:  # Save every 10 tickers, to reduce the chance of losing data
-                    database.save("price_last_ticker", ticker)
+                if i < len(approved_tickers) - 1:
+                    database.save("price_last_ticker", approved_tickers[i + 1])
 
             database.save("price_last_ticker", None)
 
