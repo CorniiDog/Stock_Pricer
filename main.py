@@ -45,6 +45,7 @@ def main():
                 print(ticker)
             except:
                 pass
+        database.save("price_last_ticker", None)
         print("done")
         return
 
