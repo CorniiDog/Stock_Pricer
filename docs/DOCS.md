@@ -435,7 +435,7 @@ Example
 
 </summary>
 
-[def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, cooldown=True, database_only=False) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L120) 
+[def get_ticker_historical_trend(ticker: str, start_date: datetime.datetime = None, end_date: datetime.datetime = None, cooldown=True, database_only=False) -> pd.DataFrame:](./../toolbox/ticker_prices.py#L119) 
 
 Note
 
