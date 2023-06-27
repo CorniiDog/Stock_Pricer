@@ -30,11 +30,11 @@ def main():
         print("done")
         return
 
-    last_updated = 0
+    last_updated = None
     while True:
-        now = time.time()
-        # If it is a new day, update the database
-        if now - last_updated > 86400 * days_to_refresh:
+        now = datetime.datetime.now()
+        # If it is a new day, at 5 PM, update the database
+        if last_updated is None or (now.hour == 17 and now.minute == 0 and now.second == 0 and now.day != last_updated.day):
             print("New Day, updating database")
 
             approved_tickers = ticker_retreival.get_tickers()
@@ -51,7 +51,7 @@ def main():
 
             database.save("price_last_ticker", None)
 
-            last_updated = now
+            last_updated = datetime.datetime.now()
         time.sleep(10)
 
 
